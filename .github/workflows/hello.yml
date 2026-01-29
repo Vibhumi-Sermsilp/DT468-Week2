@@ -2,6 +2,7 @@ name: Hello World Workflow
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 jobs:
   hello-1:
     runs-on: ubuntu-latest
@@ -11,6 +12,7 @@ jobs:
       - name: Say Name
         run: echo "Vibhumi"
   bye:
+    needs: hello-1
     runs-on: ubuntu-latest
     steps:
       - name: Say Bye

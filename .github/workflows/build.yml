@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/chcekout@v4
+        uses: actions/checkout@v4
       - name: compile
-        run:
+        run: |
           pwd 
           ls
           g++ -std=c++11 negarr.cpp proxy.cpp -o main
